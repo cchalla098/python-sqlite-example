@@ -8,7 +8,6 @@ rows= cursor.fetchall()
 for row in rows:
   print (row)
 connection.commit()
-connection.close()
 try:
     cursor.execute("SELECT * FROM non_existing_table")
 except sqlite3.OperationalError as e:
