@@ -1,7 +1,7 @@
 import sqlite3
 connection = sqlite3.connect('example.db')
 cursor= connection.cursor()
-cursor.create("CREATE TABLE students (id INTEGER PRIMARY KEY, name TEXT, grade REAL)")
+cursor.execute("CREATE TABLE students (id INTEGER PRIMARY KEY, name TEXT, grade REAL)")
 cursor.execute("INSERT INTO students (name,grade) VALUES ('ALICE', 85.5)")
 cursor.execute("SELECT * FROM students")
 rows= cursor.fetchall()
