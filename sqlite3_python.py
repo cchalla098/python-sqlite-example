@@ -14,3 +14,5 @@ try:
 except sqlite3.OperationalError as e:
     print(f"An error occurred: {e}")
 cursor.execute("INSERT INTO students (name, grade) VALUES (?, ?)", ('Bob', 92.3))
+connection.commit()
+connection.close()
