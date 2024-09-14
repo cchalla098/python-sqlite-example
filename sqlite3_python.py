@@ -5,7 +5,7 @@ cursor.execute("CREATE TABLE students (id INTEGER PRIMARY KEY, name TEXT, grade 
 cursor.execute("INSERT INTO students (name,grade) VALUES ('ALICE', 85.5)")
 cursor.execute("SELECT * FROM students")
 rows= cursor.fetchall()
-for rows in rows:
+for row in rows:
   print (row)
 connection.commit()
 connection.close()
